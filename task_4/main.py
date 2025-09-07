@@ -1,5 +1,10 @@
-from parser import parse_input
+
 from handler import *
+
+def parse_input(user_input):
+    cmd, *args = user_input.split()
+    cmd = cmd.strip().lower()
+    return cmd, *args
 
 def main():
     contacts = {}
